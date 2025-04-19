@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.inputContainer {
+  position: relative;
+  width: 100%;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input {
+  flex: 1;
+  padding: 0.75rem 2.75rem;
+  border: 2px solid #3C444D;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  font-size: 1rem;
+  color: white;
+
+  &:focus {
+    border-color: #0070f3;
+  }
+}

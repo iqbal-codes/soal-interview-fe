@@ -1,0 +1,76 @@
+.banner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  width: 100%;
+
+  .avatarContainer {
+    flex-shrink: 0;
+  }
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+  }
+
+  .userInfo {
+    flex-grow: 1;
+  }
+
+  .name {
+    margin: 0 0 0.5rem;
+    font-size: 1.75rem;
+    color: white;
+  }
+
+  .bio {
+    margin: 0 0 1rem;
+    color: #9198A1;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .stats {
+    display: flex;
+    gap: 1.5rem;
+    color: #9198A1;
+    font-size: 1rem;
+
+    .stat {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+
+      strong {
+        color: white;
+      }
+    }
+  }
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+
+    .stats {
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .stat {
+        flex-direction: column;
+        min-width: 76px;
+        text-align: center;
+
+        strong {
+          font-size: 1.25rem;
+          margin-bottom: 0.25rem;
+        }
+      }
+    }
+  }
+}
