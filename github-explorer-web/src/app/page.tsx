@@ -11,8 +11,9 @@ import styles from "./page.module.scss";
 import Spinner from "@/components/Spinner/Spinner";
 import { useRouter, useSearchParams } from "next/navigation";
 import { FaCircleUser } from "react-icons/fa6";
+import { Suspense } from "react";
 
-export default function Home() {
+const Home = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -65,5 +66,12 @@ export default function Home() {
       )}
     </div>
   );
-}
+};
 
+const Page = () => (
+  <Suspense>
+    <Home />
+  </Suspense>
+);
+
+export default Page;
