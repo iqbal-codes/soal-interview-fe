@@ -6,6 +6,7 @@ import languageColors from "@/data/GithubLanguageColors.json";
 import { RiGitRepositoryFill } from "react-icons/ri";
 import { FaRegStar, FaCodeFork } from "react-icons/fa6";
 import { formatNumber } from "@/utils/strings";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 interface RepositoryListProps {
   repositories: Repository[];
@@ -44,6 +45,9 @@ export default function RepositoryList({
               }}
             >
               {repo.name}
+              <span className={`${styles.externalLinkIcon}`}>
+                <FaExternalLinkAlt size="0.8rem" />
+              </span>
             </a>
           </h3>
           <p>{repo.description || "No description provided"}</p>
@@ -74,3 +78,4 @@ export default function RepositoryList({
     </div>
   );
 }
+
