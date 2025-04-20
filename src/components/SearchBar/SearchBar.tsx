@@ -31,15 +31,18 @@ export default function SearchBar({
   };
 
   return (
-    <form onSubmit={handleSubmit} className={`${styles.container}`}>
+    <div className={`${styles.container}`}>
       {!isTop && (
         <div className={styles.githubExplorer}>
           <FaGithub size="2.5rem" /> <h1>Github Explorer</h1>
         </div>
       )}
-      <div className={styles.inputContainer}>
+
+      <form onSubmit={handleSubmit} className={styles.inputContainer}>
         <FaSearch className={styles.searchIcon} />
         <input
+          inputMode="search"
+          type="search"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           placeholder="GitHub username, Eg. octocat, microsoft, etc."
@@ -52,8 +55,8 @@ export default function SearchBar({
             size={24}
           />
         )}
-      </div>
-    </form>
+      </form>
+    </div>
   );
 }
 
