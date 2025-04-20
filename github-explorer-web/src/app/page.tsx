@@ -13,7 +13,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { FaCircleUser } from "react-icons/fa6";
 import { Suspense } from "react";
 
-const Home = () => {
+const Component = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -68,10 +68,10 @@ const Home = () => {
   );
 };
 
-const Page = () => (
+const HomePage = () => (
   <Suspense>
-    <Home />
+    <Component />
   </Suspense>
 );
 
-export default Page;
+export default HomePage;
