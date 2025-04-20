@@ -1,3 +1,5 @@
+@use "../../app/variables";
+
 .repositoryListContainer {
   width: 100%;
   display: flex;
@@ -12,13 +14,13 @@
   gap: 1rem;
   padding: 2rem;
   text-align: center;
-  color: #9198A1;
+  color: variables.$text-secondary;
 }
 
 .repositoryItem {
-  background: #0D1117;
-  border: 2px solid var(--border);
-  border-radius: 8px;
+  background: variables.$surface-0;
+  border: 2px solid variables.$border-color;
+  border-radius: 0.5rem;
   padding: 1rem;
   transition: transform 0.2s, box-shadow 0.2s;
   cursor: pointer;
@@ -33,7 +35,7 @@
     font-size: 1.25rem;
 
     a {
-      color: #0070f3;
+      color: variables.$primary-color;
       text-decoration: none;
 
       &:hover {
@@ -44,7 +46,7 @@
 
   p {
     margin: 0 0 1rem;
-    color: white;
+    color: variables.$text-primary;
     font-size: 0.9rem;
     line-height: 1.5;
   }
@@ -54,7 +56,7 @@
   display: flex;
   gap: 1rem;
   font-size: 0.9rem;
-  color: #9198A1;
+  color: variables.$text-secondary;
 
   span {
     display: flex;
@@ -62,11 +64,11 @@
     gap: 0.25rem;
 
     .languageIndicator {
-      color: white;
+      color: variables.$text-primary;
       width: 0.75rem;
       height: 0.75rem;
       display: inline-block;
-      border-radius: 6px;
+      border-radius: 0.5rem;
     }
   }
 }
@@ -74,7 +76,7 @@
 .empty-state {
   text-align: center;
   padding: 2rem;
-  color: #9198A1;
+  color: variables.$text-secondary;
   font-size: 1.1rem;
 }
 

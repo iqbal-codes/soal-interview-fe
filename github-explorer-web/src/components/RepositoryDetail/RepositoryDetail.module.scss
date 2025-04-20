@@ -1,91 +1,93 @@
-@use "variables";
+@use "../../app/variables";
 
 .container {
-    padding: 1rem;
-    margin-top: 1rem;
+  padding: 1rem;
+  margin-top: 1rem;
 }
 
 .nameWrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1rem;
 
-    .avatar {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 2px solid variables.$primary-color-0;
-        margin-right: 0.75rem;
-    }
+  .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid variables.$border-color;
+    margin-right: 0.75rem;
+  }
 
-    .name {
-        font-size: 1.25rem;
-        font-weight: 600;
-        color: variables.$primary-color-0;
-    }
+  .name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: variables.$text-primary;
+  }
 }
 
 .description {
-    color: #9198A1;
-    margin-bottom: 2rem;
-    line-height: 1.5;
+  color: variables.$text-secondary;
+  margin-bottom: 1rem;
+  line-height: 1.5;
 }
 
 .stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    border: 1px solid variables.$primary-color-60;
-    border-radius: 8px;
+  background: variables.$surface-0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid variables.$border-color;
+  border-radius: 8px;
 
-    .label {
-        font-size: 1rem;
-        color: #9198A1;
-        margin-bottom: 0.5rem;
-    }
+  .label {
+    font-size: 1rem;
+    color: variables.$text-secondary;
+    margin-bottom: 0.5rem;
+  }
 
-    .value {
-        font-size: 1rem;
-        font-weight: 600;
-        color: white;
-    }
+  .value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: variables.$text-primary;
+  }
 }
 
 .languageContainer {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    border: 1px solid #3C444D;
-    border-radius: 8px;
+  background: variables.$surface-0;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid variables.$border-color;
+  border-radius: 8px;
 
-    .languageIndicator {
-        color: white;
-        width: 0.75rem;
-        height: 0.75rem;
-        display: inline-block;
-        border-radius: 6px;
-        margin-right: 0.5rem;
-    }
+  .languageIndicator {
+    width: 0.75rem;
+    height: 0.75rem;
+    display: inline-block;
+    border-radius: 6px;
+    margin-right: 0.5rem;
+  }
 
-    .label {
-        font-size: 1rem;
-        color: #9198A1;
-        margin-bottom: 0.5rem;
-    }
+  .label {
+    font-size: 1rem;
+    color: variables.$text-secondary;
+    margin-bottom: 0.5rem;
+  }
 
-    .value {
-        font-size: 1rem;
-        font-weight: 600;
-        color: white;
-    }
+  .value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: variables.$text-primary;
+  }
 }
+

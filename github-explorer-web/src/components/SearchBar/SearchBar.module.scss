@@ -1,3 +1,5 @@
+@use "../../app/variables";
+
 .container {
   display: flex;
   flex-direction: column;
@@ -17,20 +19,38 @@
   left: 1rem;
   top: 50%;
   transform: translateY(-50%);
+  color: variables.$text-secondary;
+}
+
+.closeIcon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: variables.$text-secondary;
 }
 
 .input {
+  background: variables.$surface-0;
   flex: 1;
   padding: 0.75rem 2.75rem;
-  border: 2px solid #3C444D;
+  border: 2px solid variables.$border-color;
   border-radius: 0.5rem;
   outline: none;
   transition: border-color 0.2s;
   width: 100%;
   font-size: 1rem;
-  color: white;
+  color: variables.$text-primary;
 
   &:focus {
-    border-color: #0070f3;
+    border-color: variables.$primary-color;
   }
+}
+
+.githubExplorer {
+  color: variables.$text-primary;
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
 }

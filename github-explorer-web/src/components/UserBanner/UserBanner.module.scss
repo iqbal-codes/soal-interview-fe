@@ -1,3 +1,5 @@
+@use '../../app/variables';
+
 .banner {
   display: flex;
   align-items: center;
@@ -14,7 +16,7 @@
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #fff;
+    border: 3px solid variables.$border-color;
   }
 
   .userInfo {
@@ -24,12 +26,12 @@
   .name {
     margin: 0 0 0.5rem;
     font-size: 1.75rem;
-    color: white;
+    color: variables.$text-primary;
   }
 
   .bio {
     margin: 0 0 1rem;
-    color: #9198A1;
+    color: variables.$text-secondary;
     font-size: 1rem;
     line-height: 1.5;
   }
@@ -37,7 +39,7 @@
   .stats {
     display: flex;
     gap: 1.5rem;
-    color: #9198A1;
+    color: variables.$text-secondary;
     font-size: 1rem;
 
     .stat {
@@ -46,7 +48,7 @@
       gap: 0.25rem;
 
       strong {
-        color: white;
+        color: variables.$text-primary;
       }
     }
   }

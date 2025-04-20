@@ -3,6 +3,8 @@
 import { useState } from "react";
 import styles from "./SearchBar.module.scss";
 import { FaSearch } from "react-icons/fa";
+import { AiOutlineCloseCircle } from "react-icons/ai";
+import { FaGithub } from "react-icons/fa6";
 
 interface SearchBarProps {
   initialValue?: string;
@@ -24,19 +26,34 @@ export default function SearchBar({
     }
   };
 
+  const handleClear = () => {
+    setUsername("");
+  };
+
   return (
     <form onSubmit={handleSubmit} className={`${styles.container}`}>
-      {!isTop && <h1>Github Explorer</h1>}
+      {!isTop && (
+        <div className={styles.githubExplorer}>
+          <FaGithub size="2.5rem" /> <h1>Github Explorer</h1>
+        </div>
+      )}
       <div className={styles.inputContainer}>
         <FaSearch className={styles.searchIcon} />
         <input
-          type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           placeholder="GitHub username, Eg. octocat, microsoft, etc."
           className={`${styles.input} ${isTop && styles.top}`}
         />
+        {username && (
+          <AiOutlineCloseCircle
+            className={styles.closeIcon}
+            onClick={handleClear}
+            size={24}
+          />
+        )}
       </div>
     </form>
   );
 }
+

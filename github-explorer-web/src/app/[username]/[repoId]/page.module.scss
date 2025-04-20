@@ -1,3 +1,5 @@
+@use "../../variables";
+
 .container {
     display: flex;
     gap: 1rem;
@@ -17,5 +19,5 @@
     align-items: center;
     gap: 1rem;
     margin-top: 2rem;
-    color: #586069;
+    color: variables.$text-secondary;
 }
